@@ -28,9 +28,9 @@
 	if (!bmContext)
 		return nil;
 	
-	CGContextSetShouldAntialias(bmContext, true);
-	CGContextSetAllowsAntialiasing(bmContext, true);
-	CGContextSetInterpolationQuality(bmContext, kCGInterpolationHigh);
+	CGContextSetShouldAntialias(bmContext, false);
+	CGContextSetAllowsAntialiasing(bmContext, false);
+	CGContextSetInterpolationQuality(bmContext, kCGInterpolationNone);
 
 	/// Rotation happen here (around the center)
 	CGContextTranslateCTM(bmContext, +(rotatedRect.size.width * 0.5f), +(rotatedRect.size.height * 0.5f));
